@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21e4e635-665c-4331-853e-d13556e137fd" name="Default Changelist" comment="" />
+    <list default="true" id="21e4e635-665c-4331-853e-d13556e137fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/hoodie/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hoodie/models.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,20 +36,20 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="201" />
-          <entry key="py" value="508" />
+          <entry key="py" value="530" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="201" />
-          <entry key="Python" value="508" />
+          <entry key="Python" value="530" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hood/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -56,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hoodie/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="195">
+              <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -164,11 +166,11 @@
         <option value="$PROJECT_DIR$/hoodie/templates/registration/base.html" />
         <option value="$PROJECT_DIR$/hoodie/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/hoodie/templates/registration/registration_form.html" />
-        <option value="$PROJECT_DIR$/hoodie/models.py" />
         <option value="$PROJECT_DIR$/hoodie/admin.py" />
         <option value="$PROJECT_DIR$/hood/urls.py" />
         <option value="$PROJECT_DIR$/hoodie/views.py" />
         <option value="$PROJECT_DIR$/hood/settings.py" />
+        <option value="$PROJECT_DIR$/hoodie/models.py" />
       </list>
     </option>
   </component>
@@ -272,11 +274,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1280" height="770" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.5174051" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.12658228" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32911393" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -365,16 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hoodie/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hoodie/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -411,6 +404,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="121" column="40" lean-forward="true" selection-start-line="121" selection-start-column="40" selection-end-line="121" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hoodie/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
