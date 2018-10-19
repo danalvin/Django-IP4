@@ -91,4 +91,4 @@ class Comments(models.Model):
     user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, related_name='user')
     comments = models.TextField()
     date_posted = models.DateTimeField(auto_now=True)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    # post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
