@@ -26,3 +26,10 @@ class Business(models.Model):
     neighbor_hood = models.ForeignKey(nieghbor, on_delete=models.CASCADE, related_name="hoodbus", null=True,
                                       blank=True)
     email = models.CharField(max_length=100, null=True, blank=True)
+
+
+class Post(models.Model):
+    post = models.CharField(max_length=100, null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="adminpost", null=True, blank=True)
+    neighbor_hood = models.ForeignKey(Neighbor_hood, on_delete=models.CASCADE, related_name="hoodpost", null=True,
+                                      blank=True)
