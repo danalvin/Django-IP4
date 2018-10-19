@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21e4e635-665c-4331-853e-d13556e137fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/hood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hood/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="21e4e635-665c-4331-853e-d13556e137fd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +272,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1280" height="770" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
