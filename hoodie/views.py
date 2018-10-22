@@ -32,7 +32,7 @@ def new_profile(request):
         form = NewProfileForm(request.POST, request.FILES, instance=request.user.profile)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('index')
 
     else:
         form = NewProfileForm()
@@ -56,7 +56,7 @@ def new_neigbor_hood(request):
             location.save()
             request.user.profile.neighbor_hood = location
             request.user.profile.save()
-            return redirect('home')
+            return redirect('index')
     else:
         form = NewNeigbor_hood_Form()
     return render(request, 'new_location.html', {"form": form})
@@ -71,7 +71,7 @@ def new_business(request):
             location = form.save(commit=False)
             location.user = current_user
             location.save()
-            return redirect('home')
+            return redirect('index')
     else:
         form = New_Business_Form()
     return render(request, 'new_business.html', {"form": form})
@@ -96,7 +96,7 @@ def hood_business(request):
 @login_required(login_url='/accounts/login')
 def follow_hood(request, hood_id):
     UserProfile.objects.update(neighbor_hood=hood_id)
-    return redirect('home')
+    return redirect('index')
 
 
 @login_required(login_url='/accounts/login')
@@ -133,7 +133,7 @@ def new_post(request):
             article.save()
             request.user.profile.hoodpost = article
             request.user.profile.save()
-            return redirect('home')
+            return redirect('index')
     else:
         form = NewPostForm()
     return render(request, 'new_post.html', {"form": form})
@@ -148,7 +148,7 @@ def new_business(request):
             location = form.save(commit=False)
             location.user = current_user
             location.save()
-            return redirect('home')
+            return redirect('index')
     else:
         form = New_Business_Form()
     return render(request, 'new_business.html', {"form": form})

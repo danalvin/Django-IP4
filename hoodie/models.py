@@ -30,7 +30,10 @@ class nieghbor(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
     ID = models.CharField(max_length=100, null=True, blank=True)
-    profilepicture = models.ImageField(upload_to='images/', blank=True, default="/black.png")
+    profilepicture = models.ImageField(upload_to='images/', blank=True, default="https://encrypted-tbn0.gstatic.com"
+                                                                                "/images?q=tbn"
+                                                                                ":ANd9GcSUzmcXfpKcca8Y0zQLCpLVohzfk"
+                                                                                "-7yf4pR4NcNEr750mkKiMZDoA")
     neighbor_hood = models.ForeignKey(nieghbor, on_delete=models.CASCADE, related_name="hood", null=True,
                                       blank=True)
     secondary_email = models.CharField(max_length=100, null=True, blank=True)
@@ -90,7 +93,7 @@ class Business(models.Model):
 class Post(models.Model):
     post = models.CharField(max_length=100, null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="adminpost", null=True, blank=True)
-    neighbor_hood = models.ForeignKey(Neighbor_hood, on_delete=models.CASCADE, related_name="hoodpost", null=True,
+    neighbor_hood = models.ForeignKey(nieghbor, on_delete=models.CASCADE, related_name="hoodpost", null=True,
                                       blank=True)
 
 

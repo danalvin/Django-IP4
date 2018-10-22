@@ -5,5 +5,38 @@
 {{block.super}}
 
 
+{% for neighbor in neighbor_hood %}
+{% if user.profile.neighbor_hood == neighbor  %}
+<div class='beginning-page container'>
+	<div id='beginning-page'><h1>Welcome to Your Hood {{user.profile.neighbor_hood.name}} !</h1>
+		<h5 class="buttons-coll">
+            <!--<a  href='/new_business'>Add a Business in {{user.profile.neighbor_hood.name}} </a>-->
+            <button  class="custom-btn btn-3"><a href='/new_business'">Add A business</a></button>
+            <!--<a href='{% url "hood" %}'>Find People who are in the same hood as you!</a>-->
+            <button class="custom-btn btn-3"><a href='{% url "hood" %}'>Hood Details </a></button>
+            <!--<a href='{% url "hood_business"%}'>Find Businesses</a>-->
+            <button class="custom-btn btn-3"><a href='{% url "hood_business"%}'>Find Businesses</a></button>
+            <!--<a href='{% url "new_post"%}'>Contact your neighbours</a>-->
+            <button class="custom-btn btn-3"><a href='{% url "new_post"%}'>Post in Hood</a></button>
+
+        </h5>
+    </div>
+</div>
+
+{% else %}
+
+<div class='beginner-page container'>
+	<div id='beginner-page'><h1>We have noticed that you're not in a hood, In our app that is :)</h1>
+		<h5 class="buttons-coll">
+            <button  class="custom-btn btn-3"><a href='/new_neigbor_hood'"><i class="fa fa-plus">Add a Hood</i></a></button>
+            <button class="custom-btn btn-3"><a href='{% url "neigbor_hood"%}'><i class="fa fa-search">Find your Hood</i></a></button>
+
+        </h5>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+
+
 
 {% endblock %}

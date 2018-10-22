@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load bootstrap3 %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Condensed" rel="stylesheet">
+<div class="container">
+    <div class='row' style="line-height:200px;margin-top:150px;">
+    {%for hood in neigbor%}
+<h5 class="container">People who are in the same hood:</h5>
+        <div class='col-md-4 col-xs-4 col-sm-4 tittles card-panel hoverable' >
+<h6><legend>Name:{{hood.user}}</legend></h6>
+    <h6>ID:{{hood.user.profile.ID}}</h6>
+
+</div>
+{%endfor%}
+
+</div>
+<div class="container-fluid card-panel hoverable">
+		<div class="forms aligner">
+			<h1>News in Your Hood</h1>
+			<div class="row">
+			<div class="col-md-4 col-xs-4 col-sm-4"></div>
+			<div class="col-md-4 col-xs-4 col-sm-4">
+                {%for hood in posts%}
+
+
+			<div class='card post-cards register-card'>
+			<h8 class="left">Name: {{hood.user.username}}</h8>
+			<h9 class="right"> post: {{hood.post}}</h9>
+                <br><h9><u>Comments</u></h9>
+
+			<form  action="{%url 'hood' post_id=hood.id%}" method="post">
+                 {% csrf_token %}
+
+                {% bootstrap_form form layout='inline' %}
+
+                <input type="submit" value="Comment">
+            </form>
+
+		</div>
+			{%endfor%}
+	</div>
+
+			<div class="col-md-4 col-xs-4 col-sm-4"></div>
+		</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
