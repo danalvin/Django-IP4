@@ -20,11 +20,10 @@ def loader(request):
 
 
 @login_required(login_url='/accounts/login')
-def hoods(request,hooder_id):
-    neighbor_hood= nieghbor.objects.filter(id=hooder_id)
+def hoods(request, hooder_id):
+    neighbor_hood = nieghbor.objects.filter(id=hooder_id)
 
-    return render(request,'hood_follow.html',locals())
-
+    return render(request, 'hood_follow.html', locals())
 
 
 @login_required(login_url='/accounts/login')
@@ -32,7 +31,7 @@ def new_profile(request):
     if request.method == 'POST':
         form = NewProfileForm(request.POST, request.FILES, instance=request.user.profile)
         if form.is_valid():
-            form.save()Neighbor_hood
+            form.save()
             return redirect('home')
 
     else:
@@ -144,12 +143,12 @@ def new_post(request):
 def new_business(request):
     current_user = request.user
     if request.method == 'POST':
-        form =New_Business_Form(request.POST,request.FILES)
+        form = New_Business_Form(request.POST, request.FILES)
         if form.is_valid():
             location = form.save(commit=False)
             location.user = current_user
             location.save()
             return redirect('home')
     else:
-            form = New_Business_Form()
-    return render(request, 'new_business.html',{"form":form })
+        form = New_Business_Form()
+    return render(request, 'new_business.html', {"form": form})
