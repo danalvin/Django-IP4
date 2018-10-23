@@ -29,11 +29,8 @@ class nieghbor(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
-    ID = models.CharField(max_length=100, null=True, blank=True)
-    profilepicture = models.ImageField(upload_to='images/', blank=True, default="https://encrypted-tbn0.gstatic.com"
-                                                                                "/images?q=tbn"
-                                                                                ":ANd9GcSUzmcXfpKcca8Y0zQLCpLVohzfk"
-                                                                                "-7yf4pR4NcNEr750mkKiMZDoA")
+    identity = models.CharField(max_length=100, null=True, blank=True)
+    profilepicture = models.ImageField(upload_to='images/', blank=True)
     neighbor_hood = models.ForeignKey(nieghbor, on_delete=models.CASCADE, related_name="hood", null=True,
                                       blank=True)
     secondary_email = models.CharField(max_length=100, null=True, blank=True)

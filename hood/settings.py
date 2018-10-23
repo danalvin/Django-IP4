@@ -63,6 +63,7 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
+    'leaflet',
     'hoodie.apps.HoodieConfig',
     'bootstrap3',
     'django.contrib.admin',
