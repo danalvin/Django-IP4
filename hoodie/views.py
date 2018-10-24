@@ -65,6 +65,8 @@ def new_neigbor_hood(request):
 @login_required(login_url='/accounts/login')
 def new_business(request):
     current_user = request.user
+    hood = nieghbor.objects.get(id=1)
+    hood.delete()
     if request.method == 'POST':
         form = New_Business_Form(request.POST, request.FILES)
         if form.is_valid():

@@ -8,7 +8,7 @@ from django.dispatch import receiver
 
 
 class nieghbor(models.Model):
-    name = models.CharField(max_length=100, blank=True, null=True)
+    name = models.CharField(max_length=100, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="hoodadmin", null=True, blank=True)
     location = models.CharField(max_length=100, null=True, blank=True)
 
@@ -58,14 +58,11 @@ class UserProfile(models.Model):
 
 
 class Business(models.Model):
-    name = models.CharField(max_length=100, null=True, blank=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="business", null=True, blank=True)
-    neighbor_hood = models.ForeignKey(nieghbor, on_delete=models.CASCADE, related_name="hoodbus", null=True,
-                                      blank=True)
-    email = models.CharField(max_length=100, null=True, blank=True)
+    name = models.CharField(max_length=100, null=True, default='')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="business", null  =True, default='')
+    neighbor_hood = models.ForeignKey(nieghbor, on_delete=models.CASCADE, related_name="hoodbus", null=True, default='')
+    email = models.CharField(max_length=100, null=True, default='example@mail.com')
 
-    def __str__(self):
-        return self.name
 
     class Meta:
         ordering = ['name']
